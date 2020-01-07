@@ -1,7 +1,7 @@
-# TicTacToe_v1.0
-A simple Tic-Tac-Toe game I made in Java. originally written in C#, but i "Translated" it to Java for an android app.
+# TicTacToe_v1.0 -- C#
+A simple Tic-Tac-Toe game I made in C#. Originally for school (basic) but continued for fun.
 
-Main.Java:
+Program.cs:
 -
 runs the game, mostly writes stuff. also the picking of the names.
 contains all of the global variables for the program.
@@ -9,7 +9,7 @@ contains all of the global variables for the program.
   - isWon: checks if someone won the game.
   - board: a 3 * 3 char matrix that is the board.
     
-GameManager.Java
+GameManager.cs
 -
 contains all the function necessary for the game.
   - Init: fills the board with ' '.
@@ -18,9 +18,11 @@ contains all the function necessary for the game.
   - Play: asks the player where he wants to play. row and colloum between 0 and 2.
   - CheckWin/Row/Col/Diag1/Diag2: a function for each, and a fuction that uses all the others to check if there is a win in the board or not, using the last played spot. for example, in Rows the function checks if all the slots in the last-played-at row are the same. for the diags the function first checks if the move was on them, and then checks for win if true.
 
+#Add BotManager.cs
+
 How the game works
 -
-in Main, there is a while loops that run as long as "isWon" is false (no one won the game yet) or the int variable "turns" is lower than 9 (the board isn't full). it displays the board, and announces the players whose turn to play is now (X/O, again determined using "turn").
+in Program.cs, there is a while loops that run as long as "isWon" is false (no one won the game yet) or the int variable "turns" is lower than 9 (the board isn't full). it displays the board, and announces the players whose turn to play is now (X/O, again determined using "turn").
 - calls GameManager.Play().
 - turn = !turn
 - turns++.
